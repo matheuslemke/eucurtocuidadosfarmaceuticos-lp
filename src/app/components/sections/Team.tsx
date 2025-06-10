@@ -39,7 +39,7 @@ export function Team() {
               <GradientText className="text-xl font-bold mb-2">
                 {member.title}
               </GradientText>
-              <span className="text-md font-extrabold mb-2 text-gray-50">
+              <span className="text-md italic font-extrabold mb-2 text-gray-50">
                 {member.job}
               </span>
               <p className="text-gray-300 font-light">
