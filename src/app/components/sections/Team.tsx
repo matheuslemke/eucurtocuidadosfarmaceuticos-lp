@@ -1,5 +1,6 @@
 import { Button } from '../Button'
 import { Card } from '../Card'
+import { GradientText } from '../GradientText'
 
 const team = [
   {
@@ -25,15 +26,15 @@ export function Team() {
     <section className="py-16 px-6 bg-gray-900">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          QUEM ESTÁ POR TRÁS DA SUA TRANSFORMAÇÃO COM A IA?
+          Conheça nossa equipe de especialistas
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
             <Card key={index}>
-              <h3 className="text-xl font-bold mb-2 text-yellow-400">
+              <GradientText className="text-xl font-bold mb-2">
                 {member.title}
-              </h3>
+              </GradientText>
               <p className="text-gray-300">
                 {member.description}
               </p>

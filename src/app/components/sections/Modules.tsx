@@ -1,5 +1,6 @@
 import { Button } from '../Button'
 import { Card } from '../Card'
+import { GradientText } from '../GradientText'
 
 const modules = [
   {
@@ -34,15 +35,15 @@ export function Modules() {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           APRENDA TUDO SOBRE FARMÁCIA, ATENDIMENTO E IA EM{' '}
-          <span className="text-yellow-400">6 MÓDULOS PRÁTICOS</span>
+          <GradientText>6 MÓDULOS PRÁTICOS</GradientText>
         </h2>
 
         <div className="space-y-8">
           {modules.map((module, index) => (
             <Card key={index}>
-              <h3 className="text-xl font-bold mb-4 text-yellow-400">
+              <GradientText className="text-xl font-bold mb-4">
                 {module.title}
-              </h3>
+              </GradientText>
               <p className="text-gray-300">
                 {module.description}
               </p>

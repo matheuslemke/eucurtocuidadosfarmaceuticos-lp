@@ -1,4 +1,5 @@
 import { Button } from '../Button'
+import { GradientText } from '../GradientText'
 
 export function Hero() {
   return (
@@ -13,7 +14,7 @@ export function Hero() {
         
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
           Transforme seu atendimento em drogarias com o poder da{' '}
-          <span className="text-yellow-400">inteligência artificial!</span>
+          <GradientText>inteligência artificial!</GradientText>
         </h1>
         
         <p className="text-lg md:text-xl mb-8 max-w-4xl mx-auto leading-relaxed text-gray-300">

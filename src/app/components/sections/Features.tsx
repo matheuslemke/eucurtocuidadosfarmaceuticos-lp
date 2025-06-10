@@ -1,4 +1,5 @@
-import { Button } from '../Button'
+import { VerifiedIcon } from '../icons/VerifiedIcon'
+import { GradientText } from '../GradientText'
 
 const features = [
   {
@@ -31,30 +32,23 @@ const features = [
   }
 ]
 
-function VerifiedIcon() {
-  return (
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
-      <circle cx="16" cy="16" r="15" fill="#18181b" stroke="#fde047" strokeWidth="2" />
-      <path d="M10.5 16.5L14 20L21.5 12.5" stroke="#fde047" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  )
-}
-
 export function Features() {
   return (
     <section className="py-16 px-6 bg-gray-900">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
-          <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
-            Para quem <span className="font-extrabold">é</span>
-          </span> esta Imersão?
+          <GradientText>
+            Pare de <span className="font-extrabold"> perder vendas!</span>
+          </GradientText>
         </h2>
         <div className="rounded-2xl border border-gray-700 bg-black/60 p-6 md:p-10 flex flex-col gap-0 shadow-lg">
           {features.map((feature, idx) => (
             <div key={feature.title} className="flex flex-col items-center gap-4 py-6 md:py-8 px-2 md:px-6 w-full">
               <div className="flex gap-4 items-center">
                 <VerifiedIcon />
-                <span className="text-lg md:text-xl font-medium bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent">{feature.title}</span>
+                <GradientText className="text-lg md:text-xl font-medium">
+                  {feature.title}
+                </GradientText>
               </div>
               <span className="text-md md:text-lg text-gray-100 font-light">{feature.description}</span>
               {idx < features.length - 1 && (
