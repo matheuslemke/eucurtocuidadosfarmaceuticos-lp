@@ -4,19 +4,23 @@ import { GradientText } from '../GradientText'
 
 const team = [
   {
-    title: 'Cris Zanol - FARMACÊUTICA E TREINADORA',
+    title: 'Cris Zanol',
+    job: 'Farmacêutica e Treinadora',
     description: 'Com mais de 15 anos de experiência no setor farmacêutico e visão inovadora, Cris traz o conhecimento técnico e a validação prática para o uso da IA no balcão. Ela viu a IA revolucionar seu próprio negócio e compartilha o caminho com você.'
   },
   {
-    title: 'Cleverson Alves - DESIGNER E TREINADOR EM MARKETING',
+    title: 'Cleverson Alves',
+    job: 'Designer e Treinador em Marketing',
     description: 'Especialista em estratégias visuais e de vendas de alta performance, Cleverson desenvolveu a metodologia de aplicação da IA focada em resultados de vendas e atendimento, com cases de sucesso comprovados no mercado farmacêutico.'
   },
   {
-    title: 'Lemke - AGÊNCIA DE DESENVOLVIMENTO',
+    title: 'Lemke',
+    job: 'Agência de Desenvolvimento',
     description: 'Uma equipe dedicada a criar experiências de aprendizado online fluidas, modernas e eficazes, garantindo que sua jornada no curso seja a melhor possível.'
   },
   {
-    title: 'Vanderlei Freitas - GESTOR DO PROJETO',
+    title: 'Vanderlei Freitas',
+    job: 'Gestor do Projeto',
     description: 'Mais de 25 anos de experiência no mercado farmacêutico, tendo atuado em diversas áreas, desde atendente até sócio-proprietário de uma rede de drogarias.'
   }
 ]
@@ -31,11 +35,14 @@ export function Team() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
-            <Card key={index}>
+            <Card key={index} className='flex flex-col'>
               <GradientText className="text-xl font-bold mb-2">
                 {member.title}
               </GradientText>
-              <p className="text-gray-300">
+              <span className="text-md font-extrabold mb-2 text-gray-50">
+                {member.job}
+              </span>
+              <p className="text-gray-300 font-light">
                 {member.description}
               </p>
             </Card>
