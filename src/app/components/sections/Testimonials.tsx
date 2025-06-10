@@ -27,7 +27,7 @@ export function Testimonials() {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           <GradientText>
-            VEJA QUEM JÁ ESTÁ VENDENDO MAIS E SE DESTACANDO COM A IA!
+            Veja quem já está vendendo mais e se destacando com a IA!
           </GradientText>
         </h2>
 
