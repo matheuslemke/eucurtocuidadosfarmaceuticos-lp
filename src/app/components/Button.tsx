@@ -12,13 +12,16 @@ export function Button({
   className = '',
   ...props 
 }: ButtonProps) {
-  const baseStyles = 'font-bold rounded-full transition-all duration-300 transform hover:scale-105'
-  
+  const baseStyles =
+    'relative font-bold rounded-full transition-all duration-300 flex items-center justify-center overflow-hidden border border-yellow-300 shadow-[0_0_24px_4px_rgba(253,224,71,0.5)] mx-auto'
+
   const variants = {
-    primary: 'bg-yellow-400 hover:bg-yellow-500 text-black',
-    secondary: 'bg-gray-800 hover:bg-gray-700 text-white'
+    primary:
+      'bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-400 text-black',
+    secondary:
+      'bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 text-white'
   }
-  
+
   const sizes = {
     sm: 'py-2 px-4 text-sm',
     md: 'py-3 px-6 text-base',
@@ -27,10 +30,33 @@ export function Button({
 
   return (
     <button
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+      className={
+        `${baseStyles} ${variants[variant]} ${sizes[size]} ${className} group`
+      }
       {...props}
     >
-      {children}
+      <span
+        className="z-10 transition-all duration-300 group-hover:scale-110 group-hover:font-extrabold uppercase"
+        style={{ letterSpacing: 1 }}
+      >
+        {children}
+      </span>
+      <span
+        aria-hidden
+        className="absolute right-0 top-0 h-full w-1/2 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(circle at 80% 50%, #fde047 40%, #fbbf24 70%, transparent 100%)',
+          filter: 'blur(4px)',
+          opacity: 0.95,
+          transition: 'opacity 0.3s'
+        }}
+      />
+      <span
+        aria-hidden
+        className="absolute inset-0 rounded-full border border-yellow-200 pointer-events-none"
+        style={{ boxShadow: '0 0 32px 8px #fde04788' }}
+      />
     </button>
   )
 } 
