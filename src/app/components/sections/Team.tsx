@@ -1,27 +1,32 @@
 import { Button } from '../Button'
 import { Card } from '../Card'
 import { GradientText } from '../GradientText'
+import Image from 'next/image'
 
 const team = [
   {
     title: 'Cris Zanol',
     job: 'Farmacêutica e Treinadora',
-    description: 'Com mais de 15 anos de experiência no setor farmacêutico e visão inovadora, Cris traz o conhecimento técnico e a validação prática para o uso da IA no balcão. Ela viu a IA revolucionar seu próprio negócio e compartilha o caminho com você.'
+    description: 'Com mais de 15 anos de experiência no setor farmacêutico e visão inovadora, Cris traz o conhecimento técnico e a validação prática para o uso da IA no balcão. Ela viu a IA revolucionar seu próprio negócio e compartilha o caminho com você.',
+    image: null
   },
   {
     title: 'Cleverson Alves',
     job: 'Designer e Treinador em Marketing',
-    description: 'Especialista em estratégias visuais e de vendas de alta performance, Cleverson desenvolveu a metodologia de aplicação da IA focada em resultados de vendas e atendimento, com cases de sucesso comprovados no mercado farmacêutico.'
+    description: 'Especialista em estratégias visuais e de vendas de alta performance, Cleverson desenvolveu a metodologia de aplicação da IA focada em resultados de vendas e atendimento, com cases de sucesso comprovados no mercado farmacêutico.',
+    image: '/cleverson.jpeg'
   },
   {
     title: 'Lemke',
     job: 'Agência de Desenvolvimento',
-    description: 'Uma equipe dedicada a criar experiências de aprendizado online fluidas, modernas e eficazes, garantindo que sua jornada no curso seja a melhor possível.'
+    description: 'Uma equipe dedicada a criar experiências de aprendizado online fluidas, modernas e eficazes, garantindo que sua jornada no curso seja a melhor possível.',
+    image: '/lemke.jpg'
   },
   {
     title: 'Vanderlei Freitas',
     job: 'Gestor do Projeto',
-    description: 'Mais de 25 anos de experiência no mercado farmacêutico, tendo atuado em diversas áreas, desde atendente até sócio-proprietário de uma rede de drogarias.'
+    description: 'Mais de 25 anos de experiência no mercado farmacêutico, tendo atuado em diversas áreas, desde atendente até sócio-proprietário de uma rede de drogarias.',
+    image: '/vanderlei.jpeg'
   }
 ]
 
@@ -36,6 +41,22 @@ export function Team() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
             <Card key={index} className='flex flex-col'>
+              <div className="relative w-full h-64 mb-4 overflow-hidden rounded-lg bg-gray-800">
+                {member.image ? (
+                  <Image
+                    src={member.image}
+                    alt={`${member.title} - ${member.job}`}
+                    fill
+                    className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority={index < 2}
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-gray-600">
+                    <span className="text-4xl">👤</span>
+                  </div>
+                )}
+              </div>
               <GradientText className="text-xl font-bold mb-2">
                 {member.title}
               </GradientText>
