@@ -1,5 +1,4 @@
 import { Button } from '../Button'
-import { Card } from '../Card'
 import { GradientText } from '../GradientText'
 
 const modules = [
@@ -60,7 +59,7 @@ export function Modules() {
         </div>
         <div className="text-center mt-14">
           <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
-            Nosso curso é uma jornada completa, do básico ao avançado, com um diferencial que você só encontra aqui: a aplicação prática da Inteligência Artificial. Em 6 módulos dinâmicos, você vai dominar desde a legislação e o conhecimento de produtos até as técnicas de atendimento e o uso estratégico da tecnologia. Damos um foco especial no Módulo 3, onde você aprenderá a usar a IA para interagir com o cliente de forma mais inteligente e eficaz. E como bônus, você leva o nosso 'Kit 200 Prompts Ouro', seu guia rápido para indicações e vendas complementares de sucesso.
+            Nosso curso é uma jornada completa, do básico ao avançado, com um diferencial que você só encontra aqui: a aplicação prática da Inteligência Artificial. Em 6 módulos dinâmicos, você vai dominar desde a legislação e o conhecimento de produtos até as técnicas de atendimento e o uso estratégico da tecnologia. Damos um foco especial no Módulo 3, onde você aprenderá a usar a IA para interagir com o cliente de forma mais inteligente e eficaz. E como bônus, você leva o nosso &quot;Kit 200 Prompts Ouro&quot;, seu guia rápido para indicações e vendas complementares de sucesso.
           </p>
           <Button size="lg">
             Veja abaixo o que espera por você!
