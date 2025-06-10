@@ -1,0 +1,42 @@
+---
+description: 
+globs: app/**/*.tsx,tailwind.config.js
+alwaysApply: false
+---
+# Tailwind CSS Configuration for Next.js + Vercel
+
+## Meta
+- **Title**: Tailwind CSS Configuration for Next.js + Vercel
+- **Description**: Ensure proper Tailwind CSS usage and configuration for SSG landing page
+- **Created At**: Jun 10, 2025
+- **Last Updated At**: Jun 10, 2025
+- **Applies To**:
+  - Next.js App Router files (`app/**/*.tsx`)
+  - Tailwind config (`tailwind.config.js`)
+
+## Requirements
+### All styles must be formulated using Tailwind CSS classes and JIT enabled
+- **Priority**: High
+- **Correct Example**:
+  ```jsx
+  className="bg-blue-500 text-white p-6"
+  ```
+- **Incorrect Example**:
+  ```css
+  .my-class { margin: 0; padding: 0; }
+  ```
+
+### Use Next.js `<Image>` component for optimized images
+- **Priority**: High
+- **Correct Example**:
+  ```jsx
+  import Image from 'next/image';
+  <Image src="/hero.png" alt="Hero" width={1200} height={600} />
+  ```
+- **Incorrect Example**:
+  ```html
+  <img src="/hero.png" alt="Hero" />
+  ```
+
+## References
+- **Dependency**: [Standard MDC rules format](.cursor/rules/rules.mdc)

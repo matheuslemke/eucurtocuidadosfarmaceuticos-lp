@@ -1,0 +1,138 @@
+---
+description: 
+globs: app/**/*.tsx,next.config.js
+alwaysApply: false
+---
+# Cursor Rules for Next.js Landing Page with SSG
+
+## General Rules
+
+### Accessibility
+- Ensure all interactive elements (buttons, links, form inputs) are accessible via keyboard navigation.
+- Use semantic HTML elements to enhance screen reader compatibility.
+- Provide ARIA labels for non-text elements and dynamic content.
+
+### Performance
+- Optimize images using the Next.js Image component for faster loading times.
+- Use lazy loading for images and components to improve initial load performance.
+- Minimize the use of external scripts and stylesheets.
+
+### SEO
+- Use Next.js Head component to manage meta tags for better SEO.
+- Ensure each page has a unique title and description.
+- Use structured data to enhance search engine visibility.
+
+## Specific Rules
+
+### Navigation
+- Ensure the main navigation is consistent across all pages.
+- Use the Next.js Link component for client-side transitions between pages.
+- Highlight the current page in the navigation menu.
+
+| Element | Rule | Description |
+|---------|------|-------------|
+| Navigation Menu | Consistent | Main navigation should be consistent across all pages. |
+| Links | Client-side | Use Next.js Link component for client-side transitions. |
+| Current Page | Highlight | Highlight the current page in the navigation menu. |
+
+### Buttons
+- Ensure all buttons have a clear and descriptive label.
+- Use consistent styling for buttons across the site.
+- Provide visual feedback on hover and click.
+
+| Element | Rule | Description |
+|---------|------|-------------|
+| Buttons | Descriptive Labels | All buttons should have clear and descriptive labels. |
+| Styling | Consistent | Use consistent styling for buttons across the site. |
+| Feedback | Visual | Provide visual feedback on hover and click. |
+
+### Forms
+- Ensure all form inputs have associated labels.
+- Use client-side validation to provide immediate feedback.
+- Ensure forms are accessible via keyboard navigation.
+
+| Element | Rule | Description |
+|---------|------|-------------|
+| Form Inputs | Labels | All form inputs should have associated labels. |
+| Validation | Client-side | Use client-side validation to provide immediate feedback. |
+| Accessibility | Keyboard Navigation | Ensure forms are accessible via keyboard navigation. |
+
+### Images
+- Use the Next.js Image component for optimized image loading.
+- Provide alt text for all images.
+- Use lazy loading for images below the fold.
+
+| Element | Rule | Description |
+|---------|------|-------------|
+| Images | Optimized Loading | Use the Next.js Image component for optimized image loading. |
+| Alt Text | Descriptive | Provide alt text for all images. |
+| Lazy Loading | Below the Fold | Use lazy loading for images below the fold. |
+
+### Content
+- Ensure content is well-structured with appropriate headings and paragraphs.
+- Use lists and tables where appropriate for better readability.
+- Ensure text contrast meets accessibility standards.
+
+| Element | Rule | Description |
+|---------|------|-------------|
+| Headings | Structured | Ensure content is well-structured with appropriate headings and paragraphs. |
+| Lists and Tables | Readability | Use lists and tables where appropriate for better readability. |
+| Text Contrast | Accessibility | Ensure text contrast meets accessibility standards. |
+
+## Example Code Snippets
+
+### Navigation Menu
+```jsx
+import Link from 'next/link';
+
+const NavMenu = () => (
+  <nav>
+    <ul>
+      <li><Link href="/"><a>Home</a></Link></li>
+      <li><Link href="/about"><a>About</a></Link></li>
+      <li><Link href="/contact"><a>Contact</a></Link></li>
+    </ul>
+  </nav>
+);
+
+export default NavMenu;
+```
+
+### Button Component
+```jsx
+const Button = ({ children, onClick }) => (
+  <button onClick={onClick} style={{ padding: '10px 20px', backgroundColor: '#0070f3', color: '#fff', border: 'none', borderRadius: '5px' }}>
+    {children}
+  </button>
+);
+
+export default Button;
+```
+
+### Form Component
+```jsx
+const ContactForm = () => (
+  <form>
+    <label htmlFor="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label htmlFor="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <button type="submit">Submit</button>
+  </form>
+);
+
+export default ContactForm;
+```
+
+### Image Component
+```jsx
+import Image from 'next/image';
+
+const MyImage = () => (
+  <Image src="/path/to/image.jpg" alt="Descriptive text" width={500} height={300} />
+);
+
+export default MyImage;
+```

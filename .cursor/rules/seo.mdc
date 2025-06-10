@@ -1,0 +1,59 @@
+---
+description: SEO rules for a static landing page with Next.js (SSG) and deployment on Vercel
+globs: 
+alwaysApply: false
+---
+# SEO Configuration for Next.js + Vercel
+
+## Meta
+- **Title**: SEO Configuration for Next.js + Vercel
+- **Description**: Ensure proper SEO structure and metadata for SSG landing page
+- **Created At**: Jun 10, 2025
+- **Last Updated At**: Jun 10, 2025
+- **Applies To**:
+  - Next.js App Router files (`app/**/*.tsx`)
+  - Next.js config (`next.config.js`)
+
+## Non-Negotiable Rules
+### Use only static SEO and performance (SSG)
+- **Priority**: Critical
+- **Correct Example**:
+  ```jsx
+  export async function generateStaticParams() { return [{ slug: 'home' }]; }
+  export default function Page() { return <Landing />; }
+  ```
+- **Incorrect Example**:
+  ```jsx
+  export async function getServerSideProps() { return { props: {} } }
+  ```
+
+## Requirements
+### Include basic meta tags in `app/head.tsx` or via `metadata`
+- **Priority**: High
+- **Correct Example**:
+  ```jsx
+  export const metadata = {
+    title: 'My Landing Page',
+    description: 'Description of the landing page',
+  };
+  ```
+
+### Enable lazy-loading of images and preload critical fonts
+- **Priority**: Medium
+- **Correct Example**:
+  ```html
+  <link rel="preload" href="/fonts/myfont.woff2" as="font" type="font/woff2" crossorigin />
+  <Image src="/logo.png" alt="Logo" loading="lazy" />
+  ```
+
+### The `vercel.json` file should exist and reference custom domain/redirects if necessary
+- **Priority**: Low
+- **Correct Example**:
+  ```json
+  {
+    "rewrites": [{ "source": "/", "destination": "/home" }]
+  }
+  ```
+
+## References
+- **Dependency**: [Standard MDC rules format](.cursor/rules/rules.mdc)
