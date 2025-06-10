@@ -34,8 +34,7 @@ export function Modules() {
     <section className="py-16 px-6 bg-gray-900">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          APRENDA TUDO SOBRE FARMÁCIA, ATENDIMENTO E IA EM{' '}
-          <GradientText>6 MÓDULOS PRÁTICOS</GradientText>
+          <GradientText>APRENDA TUDO SOBRE FARMÁCIA, ATENDIMENTO E IA EM 6 MÓDULOS PRÁTICOS</GradientText>
         </h2>
 
         <div className="space-y-8">

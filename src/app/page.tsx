@@ -4,6 +4,7 @@ import { Modules } from './components/sections/Modules'
 import { Team } from './components/sections/Team'
 import { Testimonials } from './components/sections/Testimonials'
 import { Button } from './components/Button'
+import { GradientText } from './components/GradientText'
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
       <section className="py-16 px-6 bg-black">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            O Segredo dos Balconistas Que Mais Vendem!
+            <GradientText>O Segredo dos Balconistas Que Mais Vendem!</GradientText>
           </h2>
           <div className="bg-gray-800 rounded-lg p-8 mb-8">
             <p className="text-gray-400 text-lg">[Vídeo]</p>
@@ -43,7 +44,7 @@ export default function Home() {
       <section className="py-16 px-6 bg-black">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            Mostrando o Caminho da Transformação
+            <GradientText>Mostrando o Caminho da Transformação</GradientText>
           </h2>
           <div className="bg-gray-800 rounded-lg p-12 mb-8">
             <p className="text-gray-400 text-lg">
@@ -58,7 +59,7 @@ export default function Home() {
       <section className="py-16 px-6 bg-black">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            Bônus exclusivo
+            <GradientText>Bônus exclusivo</GradientText>
           </h2>
           
           <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 p-8 rounded-lg text-black mb-8">
