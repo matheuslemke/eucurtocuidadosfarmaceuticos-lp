@@ -5,6 +5,7 @@ import { Team } from './components/sections/Team'
 import { Testimonials } from './components/sections/Testimonials'
 import { Button } from './components/Button'
 import { GradientText } from './components/GradientText'
+import { JourneyAnimation } from './components/JourneyAnimation'
 
 export default function Home() {
   return (
@@ -47,9 +48,7 @@ export default function Home() {
             <GradientText>Mostrando o Caminho da Transformação</GradientText>
           </h2>
           <div className="bg-gray-800 rounded-lg p-12 mb-8">
-            <p className="text-gray-400 text-lg">
-              [ALGUMA ILUSTRAÇÃO, ARTE, ÍCONE OU VÍDEO QUE ILUSTRE INTELIGENCIA ARTIFICAL, CURSO, CAMINHO, JORNADA ETC.]
-            </p>
+            <JourneyAnimation />
           </div>
         </div>
       </section>
