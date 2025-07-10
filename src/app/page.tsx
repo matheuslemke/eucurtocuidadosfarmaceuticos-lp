@@ -35,7 +35,22 @@ export default function Home() {
             <GradientText>O Segredo dos Balconistas Que Mais Vendem!</GradientText>
           </h2>
           <div className="bg-gray-800 rounded-lg p-8 mb-8">
-            <p className="text-gray-400 text-lg">[Vídeo]</p>
+            <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+              <iframe
+                src="https://www.youtube.com/embed/d9C2CMbfok4" 
+                title="Dra. Débora Morais, DrogaShop"
+                className="w-full md:w-1/2 aspect-video rounded-lg"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+              <iframe
+                src="https://www.youtube.com/embed/vRrkZaOj6CU" 
+                title="Aluno Ultra Popular"
+                className="w-full md:w-1/2 aspect-video rounded-lg"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </section>
