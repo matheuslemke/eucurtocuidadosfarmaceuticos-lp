@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     siteName: "Eu curto cuidados farmacêutico",
     images: [
       {
-        url: "/logo-white.png",
-        width: 800,
+        url: "/logo-colored.png",
+        width: 600,
         height: 600,
         alt: "Logo do site Eu curto cuidados farmacêutico"
       }
