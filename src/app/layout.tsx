@@ -11,7 +11,23 @@ export const metadata: Metadata = {
   title: "Eu curto cuidados farmacêutico",
   description: "Aprenda a usar Inteligência Artificial para dominar os 200 medicamentos mais vendidos e transformar atendimentos básicos em consultas especializadas. Kit 200 Prompts Ouro incluído!",
   icons: {
-    icon: "/thumb.png"
+    icon: "/favicon.ico"
+  },
+  openGraph: {
+    title: "Eu curto cuidados farmacêutico",
+    description: "Aprenda a usar Inteligência Artificial para dominar os 200 medicamentos mais vendidos e transformar atendimentos básicos em consultas especializadas. Kit 200 Prompts Ouro incluído!",
+    url: "https://cuidadosfarmaceutico.com.br",
+    siteName: "Eu curto cuidados farmacêutico",
+    images: [
+      {
+        url: "/logo-white.png",
+        width: 800,
+        height: 600,
+        alt: "Logo do site Eu curto cuidados farmacêutico"
+      }
+    ],
+    locale: "pt_BR",
+    type: "website"
   }
 };
 
