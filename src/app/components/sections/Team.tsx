@@ -40,7 +40,7 @@ export function Team() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
-            <Card key={index} className='flex flex-col'>
+            <Card key={index} className={`flex flex-col ${index === 3 ? 'md:col-start-2' : ''}`}>
               <div className="relative w-full h-64 mb-4 overflow-hidden rounded-lg bg-gray-800">
                 {member.image ? (
                   <Image
