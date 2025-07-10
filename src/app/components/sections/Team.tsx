@@ -8,7 +8,7 @@ const team = [
     title: 'Cris Zanol',
     job: 'Farmacêutica e Treinadora',
     description: 'Com mais de 15 anos de experiência no setor farmacêutico e visão inovadora, Cris traz o conhecimento técnico e a validação prática para o uso da IA no balcão. Ela viu a IA revolucionar seu próprio negócio e compartilha o caminho com você.',
-    image: null
+    image: '/cris.png'
   },
   {
     title: 'Cleverson Alves',
