@@ -8,8 +8,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Curso IA para Farmácias - Transforme seu Atendimento",
+  title: "Eu curto cuidados farmacêutico",
   description: "Aprenda a usar Inteligência Artificial para dominar os 200 medicamentos mais vendidos e transformar atendimentos básicos em consultas especializadas. Kit 200 Prompts Ouro incluído!",
+  icons: {
+    icon: "/thumb.png"
+  }
 };
 
 export default function RootLayout({
